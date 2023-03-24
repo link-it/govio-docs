@@ -1,0 +1,16 @@
+# Table of contents
+
+* [GovIO](README.md)
+* [Documentazione tecnica](documentazione-tecnica/README.md)
+  * [Database](documentazione-tecnica/database.md)
+  * [Architettura (tbd)](documentazione-tecnica/architettura-tbd.md)
+* [Installazione (tbd)](installazione-tbd/README.md)
+  * [Prerequisiti (tbd)](installazione-tbd/prerequisiti-tbd.md)
+  * [Dispiegamento (tbd)](installazione-tbd/dispiegamento-tbd.md)
+  * [Configurazione (tbd)](installazione-tbd/configurazione-tbd.md)
+* [Manuale utente](manuale-utente/README.md)
+  * [Configurazione dei servizi](manuale-utente/configurazione-dei-servizi.md)
+  * [Consultazione messaggi](manuale-utente/consultazione-messaggi.md)
+  * [Integrazione via API](manuale-utente/integrazione-via-api.md)
+  * [Autorizzazioni](manuale-utente/autorizzazioni.md)
+  * [Spedizione messaggi via CSV](manuale-utente/spedizione-messaggi-via-csv.md)
