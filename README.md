@@ -4,7 +4,7 @@ description: Gateway di messaggistica per AppIO
 
 # GovIO
 
-GovIO è una soluzione software all'avanguardia che consente alle Pubbliche Amministrazioni di pianificare e spedire messaggi direttamente sull'AppIO, l'applicazione mobile utilizzata da milioni di cittadini. Con GovIO, le organizzazioni governative possono raggiungere rapidamente e in modo efficace i propri cittadini, fornendo loro informazioni importanti in tempo reale.
+GovIO è una soluzione software che consente alle Pubbliche Amministrazioni di pianificare e spedire messaggi direttamente sull'AppIO, l'applicazione mobile utilizzata da milioni di cittadini. Con GovIO, le organizzazioni governative possono raggiungere rapidamente e in modo efficace i propri cittadini, fornendo loro informazioni importanti in tempo reale.
 
 Integrato con la suite GovHub, GovIO eredita le anagrafiche di base (utenze, organizzazioni e servizi) e l'esperienza d'uso, offrendo una gestione unificata delle informazioni e dell'esperienza d'uso.
 
