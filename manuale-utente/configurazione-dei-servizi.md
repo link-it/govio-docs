@@ -1,7 +1,5 @@
 # Configurazione dei servizi
 
-\[\[_TOC_]]
-
 Il processo di registrazione di un nuovo servizio di messaggistica IO prevede i seguenti passaggi:
 
 1. Individuare il servizio sul Backoffice IO di pertinenza del messaggio
