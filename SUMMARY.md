@@ -1,6 +1,6 @@
 # Table of contents
 
-* [GovIO](README.md)
+* [Introduzione](README.md)
 * [Documentazione tecnica](documentazione-tecnica/README.md)
   * [Database](documentazione-tecnica/database.md)
   * [Architettura](documentazione-tecnica/architettura-tbd.md)
