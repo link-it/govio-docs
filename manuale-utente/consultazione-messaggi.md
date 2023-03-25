@@ -1,7 +1,5 @@
 # Consultazione messaggi
 
-\[\[_TOC_]]
-
 Dalla sezione `Messaggi` della console è possibile consultare il dettaglio delle notifiche pianificate dall'AppIO.
 
 ## Autorizzazione
