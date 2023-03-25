@@ -15,3 +15,4 @@
   * [Consultazione messaggi](manuale-utente/consultazione-messaggi.md)
   * [Spedizione messaggi via API](manuale-utente/integrazione-via-api.md)
   * [Spedizione messaggi via CSV](manuale-utente/spedizione-messaggi-via-csv.md)
+* [Licenza](licenza.md)
