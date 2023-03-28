@@ -16,10 +16,10 @@ Ha visibilità dei file caricati e dello stato di spedizione dei messaggi presen
 
 Autorizza le risorse:
 
-* `GET /files`
-* `GET /files/{id}`
-* `GET /messages`
-* `GET /messages/{id}`
+* `GET /files/*`
+* `GET /messages/*`
+* `GET /services/*`
+* `GET /organizations/*`
 
 </details>
 
@@ -32,10 +32,42 @@ Estende le autorizzazioni del ruolo GovIO Viewer con la possibilità di inviare 
 Autorizza le risorse:
 
 * `POST /files`
-* `GET /files`
-* `GET /files/{id}`
+* `GET /files/*`
 * `POST /messages`
-* `GET /messages`
-* `GET /messages/{id}`
+* `GET /messages/*`
+* `GET /services/*`
+* `GET /organizations/*`
+
+</details>
+
+<details>
+
+<summary>GovIO Service Instance Viewer</summary>
+
+Ha visibilità dei servizi di notifica configurati e dei modelli associati
+
+Autorizza le risorse:
+
+* `GET /service-instances/*`
+* `GET /placeholders/*`
+* `GET /templates/*`
+* `GET /services/*`
+* `GET /organizations/*`
+
+</details>
+
+<details>
+
+<summary>GovIO Service Instance Editor</summary>
+
+Estende le autorizzazioni del Service Instance Editor con la possibilità di registrare e modificare servizi di notifica ed i relativi modelli di messaggio
+
+Autorizza le risorse:
+
+* `GET,POST,PUT,PATCH,DELETE /service-instances/*`
+* `GET,POST,PUT,PATCH,DELETE /placeholders/*`
+* `GET,POST,PUT,PATCH,DELETE /templates/*`
+* `GET /services/*`
+* `GET /organizations/*`
 
 </details>
