@@ -2,9 +2,9 @@
 description: Operazioni autorizzate ai ruoli previsti
 ---
 
-# Autorizzazioni
+# Autorizzazione
 
-Di seguito sono elencati i ruoli previsti dalle API di Backoffice di GovIO, ognuno dei quali fornisce l'autorizzazione per accedere alle risorse specificate, limitatamente alle entità delle organizzazioni e ai servizi associati all'autorizzazione, secondo le regole definite da GovRegistry.
+Di seguito sono elencati i ruoli previsti dalle API di Backoffice di GovIO, ognuno dei quali fornisce l'autorizzazione per accedere alle risorse specificate. Se la risorsa è autorizzata, viene verificato che l'autorizzazione sia relativa all'organizzazione e servizio oggetto della richiesta.
 
 È importante notare che la gestione delle autorizzazioni è una parte fondamentale della piattaforma GovIO e viene rigorosamente controllata per garantire la sicurezza e la privacy dei dati. Ciò significa che gli utenti avranno accesso solo alle risorse per le quali hanno le autorizzazioni appropriate, in base al ruolo assegnato e alle regole di autorizzazione definite da GovRegistry.
 

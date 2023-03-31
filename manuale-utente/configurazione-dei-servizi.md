@@ -1,4 +1,8 @@
-# Configurazione dei servizi
+---
+description: Configurazione di un servizio di notifica IO
+---
+
+# Servizi di notifica
 
 Il processo di registrazione di un nuovo servizio di messaggistica IO prevede i seguenti passaggi:
 
