@@ -13,7 +13,7 @@
   * [Politiche di sicurezza](manuale-utente/politiche-di-sicurezza/README.md)
     * [Autenticazione](manuale-utente/politiche-di-sicurezza/autenticazione.md)
     * [Autorizzazione](manuale-utente/politiche-di-sicurezza/autorizzazioni.md)
-  * [Servizi di notifica](manuale-utente/configurazione-dei-servizi.md)
+  * [Configurazione dei servizi](manuale-utente/configurazione-dei-servizi.md)
   * [Consultazione messaggi](manuale-utente/consultazione-messaggi.md)
   * [Spedizione messaggi via API](manuale-utente/integrazione-via-api.md)
   * [Spedizione messaggi via CSV](manuale-utente/spedizione-messaggi-via-csv.md)

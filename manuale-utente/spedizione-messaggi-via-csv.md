@@ -26,7 +26,7 @@ Di seguito i campi previsti:
 
 ## Campi CSV con segnaposto personalizzati
 
-Nel caso in cui il modello di messaggio preveda dei segnaposto aggiuntivi, il CSV dovrà prevedere i campi corrispondenti accordati a quelli base indicati in precedenza.
+Nel caso in cui il modello di messaggio preveda dei segnaposto aggiuntivi, il CSV dovrà prevedere i campi corrispondenti accodati a quelli base nell'ordine in cui sono stati associati al modello.
 
 ## Esempio di CSV
 
