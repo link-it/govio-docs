@@ -1,6 +1,8 @@
-# Configurazione (tbd)
+---
+description: Proprietà di configurazione del Batch
+---
 
-
+# govio-batch.properties
 
 | Proprietà                                    | Descrizione                                                                                                                       |
 | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |

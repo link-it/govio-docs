@@ -36,5 +36,9 @@ Per dispiegare la WebApp è sufficiente copiare il contenuto della cartella `/di
 
 ## Configurazione
 
-Per il corretto&#x20;
+Per il corretto funzionamento deve essere perfezionata la configurazione dell'applicazione nel file `assets/config/app-config.json`, in particolare:
+
+| Proprietà             | Descrizione                               |
+| --------------------- | ----------------------------------------- |
+| AppConfig.GOVAPI.HOST | Url pubblica di accesso alle api di GovIO |
 

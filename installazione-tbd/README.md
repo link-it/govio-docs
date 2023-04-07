@@ -10,6 +10,6 @@ In questa sezione vedremo come dispiegare GovIO su host fisico:
 [dispiegamento-tbd.md](dispiegamento-tbd.md)
 {% endcontent-ref %}
 
-{% content-ref url="configurazione-tbd.md" %}
-[configurazione-tbd.md](configurazione-tbd.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
