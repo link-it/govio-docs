@@ -27,6 +27,10 @@ A titolo di esempio, consideriamo un messaggio per la scadenza della Carta di Id
 >
 > È possibile prenotare un appuntamento per il rinnovo del suo documento sul sito dell'[agenda ministeriale](https://www.prenotazionicie.interno.gov.it/cittadino/n/sc/wizardAppuntamentoCittadino/sceltaComune) oppure, se avesse bisogno di assistenza, recandosi presso le sedi URP del comune. Per maggiori informazioni consultare il [sito del Ministero dell'Interno](https://www.cartaidentita.interno.gov.it/cittadini/rilascio-e-rinnovo-in-italia/)
 
+{% hint style="info" %}
+Il messaggio risultante dall'applicazione del modello deve essere lungo tra 80 e 10000 caratteri, mentre l'oggetto tra 10 e 120.
+{% endhint %}
+
 Il modello contiene quattro segnaposto: `full_name`, `due_date`, `identity_card_number` e `release_date`. A eccezione di `due_date` che è già previsto come valore di default nei modelli, gli altri segnaposto sono specifici per questo servizio e devono essere configurati.
 
 Di seguito, viene illustrata la configurazione del servizio corrispondente:

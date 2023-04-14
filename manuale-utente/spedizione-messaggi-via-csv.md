@@ -4,25 +4,27 @@ GovIO consente di pianificare l'invio massivo di messaggi ai cittadini tramite i
 
 Di seguito i campi previsti:
 
-## Campi CSV base senza avviso di pagamento
+## Campi CSV base
 
-| # | Nome             | Obb. | Descrizione                       | Esempio             |
-| - | ---------------- | ---- | --------------------------------- | ------------------- |
-| 1 | taxcode          | si   | Codice fiscale destinatario       | RSSMRO00A00A000A    |
-| 2 | expedition\_date | si   | Data di spedizione della notifica | 2027-12-03T10:15:30 |
-| 3 | due\_date        | no   | Data scadenza                     | 2027-12-03T10:15:30 |
+| Nome             | Obb. | Descrizione                       | Esempio             |
+| ---------------- | ---- | --------------------------------- | ------------------- |
+| taxcode          | si   | Codice fiscale destinatario       | RSSMRO00A00A000A    |
+| expedition\_date | si   | Data di spedizione della notifica | 2027-12-03T10:15:30 |
 
-## Campi CSV base con avviso di pagamento
+## Con scadenza
 
-| # | Nome                      | Descrizione | Esempio                                             |
-| - | ------------------------- | ----------- | --------------------------------------------------- |
-| 1 | taxcode                   | si          | Codice fiscale destinatario                         |
-| 2 | expedition\_date          | si          | Data di spedizione della notifica                   |
-| 3 | due\_date                 | no          | Data di scadenza dell'avviso                        |
-| 4 | notice\_number            | si          | Numero dell'avviso di pagamento                     |
-| 5 | amount                    | si          | Importo in centesimi                                |
-| 6 | invalid\_afted\_due\_date | no          | Se true, avviso non valido dopo la data di scadenza |
-| 7 | payee\_taxcode            | no          | Codice fiscale dell'ente creditore                  |
+| Nome      | Obb. | Descrizione   | Esempio             |
+| --------- | ---- | ------------- | ------------------- |
+| due\_date | no   | Data scadenza | 2027-12-03T10:15:30 |
+
+## Con avviso di pagamento
+
+| Nome                      | Obb. | Descrizione                                         |
+| ------------------------- | ---- | --------------------------------------------------- |
+| notice\_number            | si   | Numero dell'avviso di pagamento                     |
+| amount                    | si   | Importo in centesimi                                |
+| invalid\_afted\_due\_date | no   | Se true, avviso non valido dopo la data di scadenza |
+| payee\_taxcode            | no   | Codice fiscale dell'ente creditore                  |
 
 ## Campi CSV con segnaposto personalizzati
 
