@@ -7,6 +7,7 @@ description: Diagramma relazionale delle entità di GovIO
 ```mermaid
 erDiagram
 
+
     govio_templates ||..o{ govio_template_placeholders : ""
     govio_template_placeholders }o..|| govio_placeholders : ""
     govhub_services ||..o{ govio_service_istances : deliver
@@ -18,6 +19,7 @@ erDiagram
     govio_files ||..o{ govio_file_messages : contains
     govio_file_messages o|..|| govio_messages : "" 
     govhub_users ||..o{ govio_messages : sends  
+    govio_messages ||..o{ govio_messages_idempotency_keys : ""
 
     govio_service_istances {
         long id PK
@@ -25,6 +27,8 @@ erDiagram
         long id_govhub_organization FK
         long id_govio_template FK
         string apikey
+        string ioServiceId
+        boolean enabled
     }
 
     govio_templates {
@@ -97,5 +101,13 @@ erDiagram
         string status
         string status_detail
     }
+
+    govio_messages_idempotency_keys {
+        long id PK
+        long id_govio_message fk
+        uuid idempotencyKey
+        integer beanHashcode
+    }
+
 
 ```

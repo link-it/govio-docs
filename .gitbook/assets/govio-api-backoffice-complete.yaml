@@ -111,7 +111,7 @@ paths:
         '200':
           description: Successful operation.
           content:
-            application/json:
+            application/hal+json:
               schema:
                  $ref: "#/components/schemas/UserList"
         '400':
@@ -176,7 +176,7 @@ paths:
         '200':
           description: Successful operation.
           content:
-            application/json:
+            application/hal+json:
               schema:
                  $ref: "#/components/schemas/OrganizationList"
         '400':
@@ -205,7 +205,7 @@ paths:
            '200':
              description: Successful operation.
              content:
-               application/json:
+               application/hal+json:
                  schema:
                    $ref: '#/components/schemas/Organization'          
            '400':
@@ -305,7 +305,7 @@ paths:
         '200':
           description: Successful operation.
           content:
-            application/json:
+            application/hal+json:
               schema:
                  $ref: "#/components/schemas/ServiceList"
         '400':
@@ -426,6 +426,7 @@ paths:
       parameters:
          - $ref: '#/components/parameters/service_instance_id_query'
       requestBody:
+        required: true
         content:
           multipart/form-data:
             schema:
@@ -441,7 +442,7 @@ paths:
         '200':
           description: Successful operation.
           content:
-            application/json:
+            application/hal+json:
               schema:
                 $ref: '#/components/schemas/GovioFile'
           links:
@@ -488,7 +489,7 @@ paths:
         '200':
           description: Successful operation.
           content:
-            application/json:
+            application/hal+json:
               schema:
                 $ref: '#/components/schemas/FileList'
         '400':
@@ -517,7 +518,7 @@ paths:
         '200':
           description: Successful operation.
           content:
-            application/json:
+            application/hal+json:
               schema:
                 $ref: '#/components/schemas/GovioFile'
           links:
@@ -590,7 +591,7 @@ paths:
         '200':
           description: Successful operation.
           content:
-            application/json:
+            application/hal+json:
               schema:
                 $ref: '#/components/schemas/FileMessageList'
         '400':
@@ -614,6 +615,7 @@ paths:
         - message
       parameters:
         - $ref: '#/components/parameters/service_instance_id_query'
+        - $ref: '#/components/parameters/idempotency_key'
       summary: Send a new message.
       description: >
          Send a message through the service template.
@@ -640,7 +642,7 @@ paths:
         '201':
           description: Successful operation.
           content:
-            application/json:
+            application/hal+json:
               schema:
                 $ref: '#/components/schemas/GovioMessage'
           links:
@@ -670,6 +672,9 @@ paths:
         - $ref: '#/components/parameters/tax_code_query'
         - $ref: '#/components/parameters/service_id_query_optional'
         - $ref: '#/components/parameters/organization_id_query_optional'
+        - $ref: '#/components/parameters/service_q'
+        - $ref: '#/components/parameters/organization_q'
+        - $ref: '#/components/parameters/message_status_query'
         - $ref: '#/components/parameters/message_ordering_query'
         - $ref: '#/components/parameters/sort_direction_query'
         - $ref: '#/components/parameters/limit'
@@ -682,7 +687,7 @@ paths:
         '200':
           description: Successful operation.
           content:
-            application/json:
+            application/hal+json:
               schema:
                 $ref: '#/components/schemas/GovioMessageList'
         '400':
@@ -711,7 +716,7 @@ paths:
         '200':
           description: Successful operation.
           content:
-            application/json:
+            application/hal+json:
               schema:
                 $ref: '#/components/schemas/GovioMessage'               
         '400':
@@ -739,6 +744,7 @@ paths:
          clients can send messages to the IO service using the service instance.
       operationId: createServiceInstance
       requestBody:
+        required: true
         content:
           application/json:
              schema:
@@ -774,6 +780,7 @@ paths:
       parameters:
         - $ref: '#/components/parameters/service_id_query_optional'
         - $ref: '#/components/parameters/organization_id_query_optional'
+        - $ref: '#/components/parameters/io_service_id_query_optional'
         - $ref: '#/components/parameters/q_query'
         - $ref: '#/components/parameters/enabled_query'
         - $ref: '#/components/parameters/limit'
@@ -787,7 +794,7 @@ paths:
         '200':
           description: Successful operation.
           content:
-            application/json:
+            application/hal+json:
               schema:
                 $ref: '#/components/schemas/GovioServiceInstanceList'
         '400':
@@ -816,9 +823,9 @@ paths:
         '200':
           description: Successful operation.
           content:
-            application/json:
+            application/hal+json:
               schema:
-                $ref: '#/components/schemas/GovioServiceInstance'
+                $ref: '#/components/schemas/GovioServiceInstanceFull'
           links:
              upload-file:
                 $ref: "#/components/links/uploadFile"
@@ -857,9 +864,9 @@ paths:
         '200':
           description: Succsessful operation.
           content:
-             application/json:
+             application/hal+json:
                 schema:
-                   $ref: '#/components/schemas/GovioServiceInstance'
+                   $ref: '#/components/schemas/GovioServiceInstanceFull'
           links:
              self:
                 $ref: "#/components/links/readServiceInstance"
@@ -897,7 +904,7 @@ paths:
            '201':
              description: Successful operation.
              content:
-               application/json:
+               application/hal+json:
                  schema:
                    $ref: '#/components/schemas/GovioTemplate'
              links:
@@ -960,7 +967,7 @@ paths:
            '200':
              description: Successful operation.
              content:
-               application/json:
+               application/hal+json:
                  schema:
                    $ref: '#/components/schemas/GovioTemplate'
              links:
@@ -1004,7 +1011,7 @@ paths:
          '200':
            description: Succsessful operation.
            content:
-              application/json:
+              application/hal+json:
                  schema:
                     $ref: '#/components/schemas/GovioTemplate'
            links:
@@ -1047,7 +1054,7 @@ paths:
            '201':
              description: Successful operation.
              content:
-               application/json:
+               application/hal+json:
                  schema:
                    $ref: '#/components/schemas/GovioTemplatePlaceholder'
            '400':
@@ -1094,7 +1101,7 @@ paths:
            '201':
              description: Successful operation.
              content:
-               application/json:
+               application/hal+json:
                  schema:
                    $ref: '#/components/schemas/GovioListTemplatePlaceholder'
                  example:
@@ -1135,7 +1142,7 @@ paths:
            '200':
              description: Successful operation.
              content:
-               application/json:
+               application/hal+json:
                  schema:
                    $ref: '#/components/schemas/GovioListTemplatePlaceholder'
            '400':
@@ -1198,7 +1205,7 @@ paths:
            '201':
              description: Successful operation.
              content:
-               application/json:
+               application/hal+json:
                  schema:
                    $ref: '#/components/schemas/GovioPlaceholder'
              links:
@@ -1233,7 +1240,7 @@ paths:
            '200':
              description: Successful operation.
              content:
-               application/json:
+               application/hal+json:
                  schema:
                    $ref: '#/components/schemas/GovioPlaceholderList'
            '400':
@@ -1263,7 +1270,7 @@ paths:
            '200':
              description: Successful operation.
              content:
-               application/json:
+               application/hal+json:
                  schema:
                    $ref: '#/components/schemas/GovioPlaceholder'
            '400':
@@ -1301,7 +1308,7 @@ paths:
          '200':
            description: Succsessful operation.
            content:
-              application/json:
+              application/hal+json:
                  schema:
                     $ref: '#/components/schemas/GovioPlaceholder'
            links:
@@ -1615,6 +1622,13 @@ components:
       schema:
         $ref: '#/components/schemas/GovioFileId'
         
+    io_service_id_query_optional:
+      name: io_service_id
+      in: query
+      required: false
+      schema:
+        $ref: '#/components/schemas/IOServiceId'        
+        
     organization_id_query:
       name: organization_id
       in: query
@@ -1644,14 +1658,14 @@ components:
         $ref: '#/components/schemas/ServiceId'
         
     service_q:
-      name: service
+      name: service_q
       in: query
       required: false
       schema:
         $ref: '#/components/schemas/GenericSearchString'
         
     organization_q:
-      name: organization
+      name: organization_q
       in: query
       required: false
       schema:
@@ -1706,6 +1720,14 @@ components:
       required: true
       schema:
         $ref: '#/components/schemas/FileMessageStatusEnum'
+        
+    idempotency_key:
+      name: idempotency_key
+      in: query
+      required: true
+      schema:
+        type: string
+        format: uuid    
         
     line_number_from_query:
       name: line_number_from
@@ -1785,6 +1807,14 @@ components:
          required: true
          schema:
             $ref: "#/components/schemas/MessageOrdering"        
+            
+    message_status_query:
+         name: status
+         in: query
+         description: Filters by message state.
+         required: false
+         schema:
+            $ref: "#/components/schemas/GovioMessageStatus"                    
             
     file_ordering_query:
          name: sort
@@ -2099,7 +2129,7 @@ components:
             status_detail:
               maxLength: 2000000
               minLength: 0
-              pattern: .*
+              pattern: '[\s\S]*'
               type: string
             appio_message_id:
               maxLength: 1024
@@ -2216,8 +2246,8 @@ components:
        properties:
           name:
              type: string
-             pattern: .*
-             maxLength:  9223372036854776000
+             pattern: .+
+             maxLength:  255
              example: cie
           description:
              type: string
@@ -2226,13 +2256,13 @@ components:
              example: Numero carta d'identità elettronica.
           example:
              type: string
-             pattern: .*
-             maxLength:  9223372036854776000
+             pattern: '[\s\S]+'
+             maxLength:  255
              example: CA000000AA
           pattern:
              type: string
              pattern: '[\s\S]*'
-             maxLength:  9223372036854776000
+             maxLength:  255
              example:  "[A-Z]{6}[0-9LMNPQRSTUV]{2}[ABCDEHLMPRST][0-9LMNPQRSTUV]{2}[A-Z][0-9LMNPQRSTUV]{3}[A-Z]" 
           type:
              $ref: "#/components/schemas/GovioPlaceholderType"
@@ -2256,6 +2286,7 @@ components:
        type: object
        additionalProperties: false
        required: 
+          - name
           - subject
           - message_body
           - has_payment
@@ -2264,21 +2295,21 @@ components:
           name:
              type: string
              pattern: .*
-             maxLength: 9223372036854776000
+             maxLength: 255
              example: Spedizione Messaggio CIE
           description:
              type: string
-             pattern: .*
+             pattern: '[\s\S]*'
              maxLength: 9223372036854776000
              example: Segnala la scadenza della proprià C.I.E. 
           subject:
              type: string
-             pattern: .*
-             maxLength: 9223372036854776000
+             pattern: .+
+             maxLength: 255
              example: Scadenza CIE n. ${cie.uppercase}
           message_body:
              type: string
-             pattern: '[\s\S]*'
+             pattern: '[\s\S]+'
              maxLength: 9223372036854776000
              example: Salve, con la presente la informiamo che in data ${due_date} scadrà la Carta di Identità elettronica numero ${cie.uppercase}.             
           has_payment:
@@ -2533,20 +2564,21 @@ components:
         full_name:
           type: string
           maxLength: 255
-          pattern: ^.*$
+          pattern: .*
           example: Antonio Giscardi
       required:
         - id
         - full_name
 
-        
-    GovioServiceInstanceCreate:
+    GovioServiceInstanceData:
       type: object
       additionalProperties: false
       required:
          - service_id
          - organization_id
          - template_id
+         - enabled
+         - io_service_id
       properties:
         service_id:
           $ref: '#/components/schemas/ServiceId'
@@ -2554,57 +2586,112 @@ components:
           $ref: '#/components/schemas/OrganizationId'
         template_id:
           $ref: '#/components/schemas/GovioTemplateId'
-        apiKey:
-           type: string
-           maxLength: 9999999
-           pattern: '[\s\S]*'
         enabled:
            type: boolean
-           default: true                     
-
-
-    GovioServiceInstance:
+           default: true
+        io_service_id:
+          $ref: '#/components/schemas/IOServiceId'
+           
+    GovioServiceInstanceCreate:
       allOf:
-         - $ref: '#/components/schemas/GovioServiceInstanceCreate'
-         - type: object
-           additionalProperties: false
-           required:
-              - id
-              - enabled
-           properties:
-              id:
-                 $ref: '#/components/schemas/GovioServiceInstanceId'
-              _links:
-                 type: object
-                 additionalProperties: false
-                 properties:
-                    self:
-                       $ref: "#/components/schemas/Link"
-                    service:
-                       $ref: "#/components/schemas/Link"
-                    organization:
-                       $ref: "#/components/schemas/Link"
-                    template:
-                       $ref: "#/components/schemas/Link"                                                                     
-                 example:
-                    self:
-                       href: "https://govhub.it/govio/service-instances/1"                                   
-                    service:
-                       href: "https://govhub.it/govio/services/1"
-                    organization:
-                       href: "https://govhub.it/govio/organizations/1"
-                    template:
-                       href: "https://govhub.it/govio/templates/1"
-              _embedded:
-                 type: object
-                 additionalProperties: false
-                 properties:
-                    service:
-                      $ref: '#/components/schemas/ServiceAuthItem'
-                    organization:
-                      $ref: '#/components/schemas/OrganizationAuthItem'
-                    template:
-                      $ref: '#/components/schemas/GovioTemplate'           
+        - $ref: "#/components/schemas/GovioServiceInstanceData"
+        - type: object
+          additionalProperties: false
+          required:
+           - apiKey
+          properties:
+           apiKey:
+              type: string
+              maxLength: 9999999
+              pattern: '[\s\S]*'
+
+
+    GovioServiceInstanceFull:
+        allOf:
+           - $ref: "#/components/schemas/GovioServiceInstanceCreate" 
+           - type: object
+             additionalProperties: false
+             required:
+                 - id
+             properties:
+                 id:
+                    $ref: '#/components/schemas/GovioServiceInstanceId'                             
+                 _links:
+                    type: object
+                    additionalProperties: false
+                    properties:
+                       self:
+                          $ref: "#/components/schemas/Link"
+                       service:
+                          $ref: "#/components/schemas/Link"
+                       organization:
+                          $ref: "#/components/schemas/Link"
+                       template:
+                          $ref: "#/components/schemas/Link"                                                                     
+                    example:
+                       self:
+                          href: "https://govhub.it/govio/service-instances/1"                                   
+                       service:
+                          href: "https://govhub.it/govio/services/1"
+                       organization:
+                          href: "https://govhub.it/govio/organizations/1"
+                       template:
+                          href: "https://govhub.it/govio/templates/1"
+                 _embedded:
+                    type: object
+                    additionalProperties: false
+                    properties:
+                       service:
+                         $ref: '#/components/schemas/ServiceAuthItem'
+                       organization:
+                         $ref: '#/components/schemas/OrganizationAuthItem'
+                       template:
+                         $ref: '#/components/schemas/GovioTemplate'
+                         
+                         
+    GovioServiceInstance:
+        allOf:
+           - $ref: "#/components/schemas/GovioServiceInstanceData" 
+           - type: object
+             additionalProperties: false
+             required:
+                 - id
+             properties:
+                 id:
+                    $ref: '#/components/schemas/GovioServiceInstanceId'                             
+                 _links:
+                    type: object
+                    additionalProperties: false
+                    properties:
+                       self:
+                          $ref: "#/components/schemas/Link"
+                       service:
+                          $ref: "#/components/schemas/Link"
+                       organization:
+                          $ref: "#/components/schemas/Link"
+                       template:
+                          $ref: "#/components/schemas/Link"                                                                     
+                    example:
+                       self:
+                          href: "https://govhub.it/govio/service-instances/1"                                   
+                       service:
+                          href: "https://govhub.it/govio/services/1"
+                       organization:
+                          href: "https://govhub.it/govio/organizations/1"
+                       template:
+                          href: "https://govhub.it/govio/templates/1"
+                 _embedded:
+                    type: object
+                    additionalProperties: false
+                    properties:
+                       service:
+                         $ref: '#/components/schemas/ServiceAuthItem'
+                       organization:
+                         $ref: '#/components/schemas/OrganizationAuthItem'
+                       template:
+                         $ref: '#/components/schemas/GovioTemplate'
+                                                  
+                                 
     FileList:
       allOf:
         - $ref: '#/components/schemas/List'
@@ -2680,13 +2767,13 @@ components:
           example: 1
         line_record:
           type: string
-          pattern: .*
+          pattern: '[\s\S]*'
           maxLength: 20000000
         message:
           $ref: '#/components/schemas/GovioMessageItem'
         error:
            type: string
-           pattern: .*
+           pattern: '[\s\S]*'
            maxLength: 20000000 
         status:
           $ref: '#/components/schemas/FileMessageStatusEnum'
@@ -2714,8 +2801,6 @@ components:
               items:
                  $ref: "#/components/schemas/FileStatisticsItem"
            
-
-                       
     FileStatisticsItem:
         type: object
         additionalProperties: false
@@ -2724,7 +2809,12 @@ components:
               $ref: "#/components/schemas/GovioMessageStatus"
            count:
               type: integer
-              format: int64                           
+              format: int64
+              
+    IOServiceId:
+      type: string
+      minLength: 1
+      maxLength: 255
         
     MessageOrdering:
          type: string
@@ -2756,7 +2846,7 @@ components:
            example: cie
          value:
            type: string
-           pattern: .*
+           pattern: '[\s\S]*'
            maxLength: 2000000
            description: The Value that will replace the placeholder in the message template.
            example: CA000000AA 
