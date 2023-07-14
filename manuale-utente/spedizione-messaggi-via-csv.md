@@ -6,25 +6,15 @@ Di seguito i campi previsti:
 
 ## Campi CSV base
 
-| Nome             | Obb. | Descrizione                       | Esempio             |
-| ---------------- | ---- | --------------------------------- | ------------------- |
-| taxcode          | si   | Codice fiscale destinatario       | RSSMRO00A00A000A    |
-| expedition\_date | si   | Data di spedizione della notifica | 2027-12-03T10:15:30 |
+<table><thead><tr><th width="209">Nome</th><th width="100">Obb.</th><th>Descrizione</th><th>Esempio</th></tr></thead><tbody><tr><td>taxcode</td><td>si</td><td>Codice fiscale destinatario</td><td>RSSMRO00A00A000A</td></tr><tr><td>expedition_date</td><td>si</td><td>Data di spedizione della notifica</td><td>2027-12-03T10:15:30</td></tr></tbody></table>
 
 ## Con scadenza
 
-| Nome      | Obb. | Descrizione   | Esempio             |
-| --------- | ---- | ------------- | ------------------- |
-| due\_date | no   | Data scadenza | 2027-12-03T10:15:30 |
+<table><thead><tr><th width="209">Nome</th><th width="100">Obb.</th><th>Descrizione</th><th>Esempio</th></tr></thead><tbody><tr><td>due_date</td><td>no</td><td>Data scadenza</td><td>2027-12-03T10:15:30</td></tr></tbody></table>
 
 ## Con avviso di pagamento
 
-| Nome                      | Obb. | Descrizione                                         |
-| ------------------------- | ---- | --------------------------------------------------- |
-| notice\_number            | si   | Numero dell'avviso di pagamento                     |
-| amount                    | si   | Importo in centesimi                                |
-| invalid\_afted\_due\_date | no   | Se true, avviso non valido dopo la data di scadenza |
-| payee\_taxcode            | no   | Codice fiscale dell'ente creditore                  |
+<table><thead><tr><th width="236">Nome</th><th width="100">Obb.</th><th>Descrizione</th></tr></thead><tbody><tr><td>notice_number</td><td>si</td><td>Numero dell'avviso di pagamento</td></tr><tr><td>amount</td><td>si</td><td>Importo in centesimi</td></tr><tr><td>invalid_afted_due_date</td><td>no</td><td>Se true, avviso non valido dopo la data di scadenza</td></tr><tr><td>payee_taxcode</td><td>no</td><td>Codice fiscale dell'ente creditore</td></tr></tbody></table>
 
 ## Campi CSV con segnaposto personalizzati
 

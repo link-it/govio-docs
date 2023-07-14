@@ -19,3 +19,9 @@
   * [Consultazione messaggi](manuale-utente/consultazione-messaggi.md)
   * [Spedizione messaggi via API](manuale-utente/integrazione-via-api.md)
   * [Spedizione messaggi via CSV](manuale-utente/spedizione-messaggi-via-csv.md)
+
+## API rest
+
+* [Tracciati CSV](api-rest/tracciati-csv.md)
+* [Messaggi IO](api-rest/messaggi-io.md)
+* [Configurazione modelli](api-rest/configurazione-modelli.md)
