@@ -2,7 +2,7 @@
 description: Risorse per la configurazione dei template e placeholders
 ---
 
-# Configurazione modelli
+# Configurazione
 
 {% swagger src="../.gitbook/assets/govio-api-backoffice-complete (1).yaml" path="/templates" method="post" %}
 [govio-api-backoffice-complete (1).yaml](<../.gitbook/assets/govio-api-backoffice-complete (1).yaml>)
@@ -49,5 +49,21 @@ description: Risorse per la configurazione dei template e placeholders
 {% endswagger %}
 
 {% swagger src="../.gitbook/assets/govio-api-backoffice-complete (1).yaml" path="/placeholders/{id}" method="patch" %}
+[govio-api-backoffice-complete (1).yaml](<../.gitbook/assets/govio-api-backoffice-complete (1).yaml>)
+{% endswagger %}
+
+{% swagger src="../.gitbook/assets/govio-api-backoffice-complete (1).yaml" path="/service-instances" method="get" %}
+[govio-api-backoffice-complete (1).yaml](<../.gitbook/assets/govio-api-backoffice-complete (1).yaml>)
+{% endswagger %}
+
+{% swagger src="../.gitbook/assets/govio-api-backoffice-complete (1).yaml" path="/service-instances" method="post" %}
+[govio-api-backoffice-complete (1).yaml](<../.gitbook/assets/govio-api-backoffice-complete (1).yaml>)
+{% endswagger %}
+
+{% swagger src="../.gitbook/assets/govio-api-backoffice-complete (1).yaml" path="/service-instances/{id}" method="get" %}
+[govio-api-backoffice-complete (1).yaml](<../.gitbook/assets/govio-api-backoffice-complete (1).yaml>)
+{% endswagger %}
+
+{% swagger src="../.gitbook/assets/govio-api-backoffice-complete (1).yaml" path="/service-instances/{id}" method="patch" %}
 [govio-api-backoffice-complete (1).yaml](<../.gitbook/assets/govio-api-backoffice-complete (1).yaml>)
 {% endswagger %}

@@ -28,6 +28,6 @@
 
 ## API rest
 
-* [Configurazione modelli](api-rest/configurazione-modelli.md)
+* [Configurazione](api-rest/configurazione.md)
 * [Tracciati CSV](api-rest/tracciati-csv.md)
 * [Messaggi IO](api-rest/messaggi-io.md)
