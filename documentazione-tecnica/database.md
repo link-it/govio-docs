@@ -9,14 +9,14 @@ erDiagram
 
 
     govhub_services ||..o| govio_services : ""
-    govio_services ||..o{ govio_services_templates : ""
-    govio_services_templates }o..|| govio_templates : ""
+    govio_services ||..o{ govio_service_templates : ""
+    govio_service_templates }o..|| govio_templates : ""
     govhub_organizations ||..o{ govhub_services : deliver
 
     govio_templates ||..o{ govio_template_placeholders : ""
     govio_template_placeholders }o..|| govio_placeholders : ""
-    govio_services_templates ||..o{ govio_messages : belongs 
-    govio_services_templates ||..o{ govio_files : belongs
+    govio_service_templates ||..o{ govio_messages : belongs 
+    govio_service_templates ||..o{ govio_files : belongs
     govhub_users ||..o{ govio_files : sends  
     govio_files ||..o{ govio_file_messages : contains
     govio_file_messages o|..|| govio_messages : "" 
@@ -25,14 +25,13 @@ erDiagram
 
 
     govio_services {
-        long id PK
         long id_govhub_service FK
         string apikey
-        string ioServiceId
+        string io_service_id
         boolean enabled
     }
 
-    govio_services_templates {
+    govio_service_templates {
         long id
         long id_govio_service FK
         long id_govio_template FK
@@ -48,7 +47,6 @@ erDiagram
         boolen has_due_date
         boolean has_payment
     }
-
 
     govio_template_placeholders {
         long id_govio_template FK
@@ -69,7 +67,7 @@ erDiagram
     govio_files {
         long id PK
         long id_govauth_user FK "utenza che ha caricato il file" 
-        long id_govio_service_templates FK
+        long id_govio_service_template FK
         string name "Nome del file"
         string location "Path del file"
         datetime creation_date "Data di upload"
@@ -92,7 +90,7 @@ erDiagram
     govio_messages {
         long id PK
         long id_govauth_user FK
-        long id_govio_service_templates FK
+        long id_govio_service_template FK
         string subject
         string markdown
         long amount
