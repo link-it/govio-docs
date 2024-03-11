@@ -8,26 +8,34 @@ description: Diagramma relazionale delle entità di GovIO
 erDiagram
 
 
+    govhub_services ||..o| govio_services : ""
+    govio_services ||..o{ govio_services_templates : ""
+    govio_services_templates }o..|| govio_templates : ""
+    govhub_organizations ||..o{ govhub_services : deliver
+
     govio_templates ||..o{ govio_template_placeholders : ""
     govio_template_placeholders }o..|| govio_placeholders : ""
-    govhub_services ||..o{ govio_service_istances : deliver
-    govio_service_istances }o..|| govio_templates : refer
-    govhub_organizations ||..o{ govio_service_istances : deliver
-    govio_service_istances ||..o{ govio_messages : belongs 
-    govio_service_istances ||..o{ govio_files : belongs
+    govio_services_templates ||..o{ govio_messages : belongs 
+    govio_services_templates ||..o{ govio_files : belongs
     govhub_users ||..o{ govio_files : sends  
     govio_files ||..o{ govio_file_messages : contains
     govio_file_messages o|..|| govio_messages : "" 
     govhub_users ||..o{ govio_messages : sends  
     govio_messages ||..o{ govio_messages_idempotency_keys : ""
 
-    govio_service_istances {
+
+    govio_services {
         long id PK
         long id_govhub_service FK
-        long id_govhub_organization FK
-        long id_govio_template FK
         string apikey
         string ioServiceId
+        boolean enabled
+    }
+
+    govio_services_templates {
+        long id
+        long id_govio_service FK
+        long id_govio_template FK
         boolean enabled
     }
 
@@ -40,6 +48,7 @@ erDiagram
         boolen has_due_date
         boolean has_payment
     }
+
 
     govio_template_placeholders {
         long id_govio_template FK
@@ -60,7 +69,7 @@ erDiagram
     govio_files {
         long id PK
         long id_govauth_user FK "utenza che ha caricato il file" 
-        long id_govio_service_istance FK
+        long id_govio_service_templates FK
         string name "Nome del file"
         string location "Path del file"
         datetime creation_date "Data di upload"
@@ -83,7 +92,7 @@ erDiagram
     govio_messages {
         long id PK
         long id_govauth_user FK
-        long id_govio_service_istance FK
+        long id_govio_service_templates FK
         string subject
         string markdown
         long amount
@@ -108,6 +117,9 @@ erDiagram
         uuid idempotencyKey
         integer beanHashcode
     }
+
+
+
 
 
 ```
