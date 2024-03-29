@@ -4,25 +4,19 @@ description: Diagramma relazionale delle entità di GovIO
 
 # Database
 
+## Configurazioni
+
 ```mermaid
 erDiagram
 
-
+    govhub_organizations |o..o{ govio_templates : ""
+    govhub_services }o..|| govhub_organizations : ""
+    govhub_organizations |o..o{ govio_placeholders : ""
     govhub_services ||..o| govio_services : ""
     govio_services ||..o{ govio_service_templates : ""
     govio_service_templates }o..|| govio_templates : ""
-    govhub_organizations ||..o{ govhub_services : deliver
-
     govio_templates ||..o{ govio_template_placeholders : ""
     govio_template_placeholders }o..|| govio_placeholders : ""
-    govio_service_templates ||..o{ govio_messages : belongs 
-    govio_service_templates ||..o{ govio_files : belongs
-    govhub_users ||..o{ govio_files : sends  
-    govio_files ||..o{ govio_file_messages : contains
-    govio_file_messages o|..|| govio_messages : "" 
-    govhub_users ||..o{ govio_messages : sends  
-    govio_messages ||..o{ govio_messages_idempotency_keys : ""
-
 
     govio_services {
         long id_govhub_service FK
@@ -40,6 +34,7 @@ erDiagram
 
     govio_templates {
         long id PK
+        long id_govhub_organization FK
         string name
         string description
         string subject
@@ -57,12 +52,27 @@ erDiagram
 
     govio_placeholders {
         long id PK
+        long id_govhub_organization FK
         string name "Codice del placeholder"
         string description "Descrizione"
         string example "Valore di esempio"
         string type "Tipo di valore"
         string pattern "Regex di validazione"
     }
+```
+
+## File e Messaggi
+
+```mermaid
+erDiagram
+
+    govio_service_templates ||..o{ govio_messages : belongs 
+    govio_service_templates ||..o{ govio_files : belongs
+    govhub_users ||..o{ govio_files : sends  
+    govio_files ||..o{ govio_file_messages : contains
+    govio_file_messages o|..|| govio_messages : "" 
+    govhub_users ||..o{ govio_messages : sends  
+    govio_messages ||..o{ govio_messages_idempotency_keys : ""
 
     govio_files {
         long id PK
@@ -115,9 +125,4 @@ erDiagram
         uuid idempotencyKey
         integer beanHashcode
     }
-
-
-
-
-
 ```
