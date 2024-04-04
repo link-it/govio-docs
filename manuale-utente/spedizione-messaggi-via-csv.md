@@ -1,6 +1,6 @@
 # Spedizione messaggi via CSV
 
-GovIO consente di pianificare l'invio massivo di messaggi ai cittadini tramite il caricamento di un file CSV. Il formato del file dipende dal modello di messaggio associato al servizio.
+GovNotify consente di pianificare l'invio massivo di messaggi ai cittadini tramite il caricamento di un file CSV. Il formato del file dipende dal modello di messaggio associato al servizio.
 
 Di seguito i campi previsti:
 

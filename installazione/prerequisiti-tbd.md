@@ -1,6 +1,6 @@
 # Prerequisiti
 
-Per il funzionamento di GovIO è necessario che siano stati precedentemente dispiegati GovShell e GovRegistry, i componenti base della piattaforma GovHub. Questo requisito implica il soddisfacimento delle esigenze software di GovIO.
+Per il funzionamento di GovNotify è necessario che siano stati precedentemente dispiegati GovShell e GovRegistry, i componenti base della piattaforma GovHub. Questo requisito implica il soddisfacimento delle esigenze software di GovNotify.
 
 Di seguito sono elencati i software e le versioni dell'ambiente di riferimento:
 

@@ -1,6 +1,6 @@
 # Architettura
 
-GovIO è integrato nel framework GovHub e prevede la presenza dei moduli GovShell per l'integrazione della web app di gestione alla dashboard delle applicazioni e di GovRegistry che gestisce le anagrafiche di base.
+GovNotify è integrato nel framework GovHub e prevede la presenza dei moduli GovShell per l'integrazione della web app di gestione alla dashboard delle applicazioni e di GovRegistry che gestisce le anagrafiche di base.
 
 Per la spedizione delle notifiche al Backoffice IO, servizio nazionale per la notifica all'AppIO, necessita dell'accesso alla rete internet.&#x20;
 

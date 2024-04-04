@@ -17,7 +17,7 @@ Per maggiori informazioni sul secondo punto, si rimanda alla documentazione uffi
 
 Un modello, o template, permette di definire il contenuto del messaggio che verrà inviato al cittadino, utilizzando parti variabili, o segnaposto, che verranno sostituite con i dati forniti in fase di pianificazione delle spedizioni.
 
-GovIO integra il template engine Apache Freemarker con cui definire il modello del messaggio. Il testo del messaggio risultante sarà interpretato come Markdown.
+GovNotify integra il template engine Apache Freemarker con cui definire il modello del messaggio. Il testo del messaggio risultante sarà interpretato come Markdown.
 
 A titolo di esempio, consideriamo un messaggio per la scadenza della Carta di Identità Elettronica:
 
