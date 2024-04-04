@@ -5,7 +5,9 @@
 ## Documentazione tecnica
 
 * [Architettura](documentazione-tecnica/architettura-tbd.md)
-* [Database](documentazione-tecnica/database.md)
+* [Database](documentazione-tecnica/database/README.md)
+  * [Configurazione servizi](documentazione-tecnica/database/configurazione-servizi.md)
+  * [Messaggi](documentazione-tecnica/database/messaggi.md)
 * [Dati Sensibili](documentazione-tecnica/dati-sensibili.md)
 
 ## Installazione
